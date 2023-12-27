@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    image: node
+    command: npx serve /srv
+    ports:
+      - "3083:3000"
+    volumes:
+      - .:/srv
+    restart: always
